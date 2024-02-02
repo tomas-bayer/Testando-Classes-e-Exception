@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prática</title>
+    </head>
+    <script src="/Pratica Exceptions/praticaExceptions.js"></script>
+    <style>
+        .gerenteForm,
+        .devForm,
+        .compartilhadoForm,
+        .resultado {
+            display: none;
+        }
+    </style>
+    <body>
+        <h1>Cadastro de Funcionários:</h1>
+        <h2>Qual funcionário será cadastrado?</h2>
+
+        <input name="funcionario" type="radio" id="gerenteRadio" value="gerente" onclick="mostraForm('gerenteForm')">
+        <label for="gerenteRadio">Gerente</label><br>
+        <input name="funcionario" type="radio" id="devRadio" value="dev" onclick="mostraForm('devForm')">
+        <label for="devRadio">Desenvolvedor</label><br><br>
+    
+        <div class="compartilhadoForm">
+
+            <label>Nome</label><br>
+            <input type="text" id="nomeInput"><br><br>
+
+            <label>Idade</label><br>
+            <input type="text" id="idadeInput"><br><br>
+
+            <label>Cargo</label><br>
+            <input type="text" id="cargoInput"><br><br>
+
+        </div>
+
+        <div class="gerenteForm">
+
+            <label>Departamento</label><br>
+            <input type="text" id="departamentoInput"><br><br>
+            <button id="gerenteBtn" onclick="imprimeResultado()">Registrar Gerente</button>
+
+        </div>
+
+        <div class="devForm">
+
+            <label>Linguagem</label><br>
+            <input type="text" id="linguagemInput"><br><br>
+            <button id="devBtn" onclick="imprimeResultado()">Registrar Desenvolvedor</button>
+            
+        </div>
+
+        <div class="resultado">
+            <h2 id="tituloResultado"></h2>
+            <h3 id="subtituloResultado"></h3><br>
+            <p id="apresentar"></p><br>
+            <p id="trabalhar"></p><br>
+            <p id="variavelCargo"></p>
+            <ul id="listaErros"></ul>
+        </div>
+
+    </body>
+</html>
